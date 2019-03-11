@@ -24,7 +24,10 @@ open_fruits['images_cropped'].fetch('images_cropped/')
 
 ## Building the models
 
-TODO: this part.
+Model definition code is available in the form of `.py` and `.ipynb` files in this repository's `models/` folder.
+
+* TODO: summarize the models built here.
+* TODO: include environments also (only worth doing for models which "make the cut" and end up in the article).
 
 ## Getting the models
 
