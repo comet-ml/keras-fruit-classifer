@@ -1,3 +1,5 @@
 Python >= 3.6
 Comet
 t4
+Keras
+keras-preprocessing=1.0.9
