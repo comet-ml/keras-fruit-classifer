@@ -1,6 +1,8 @@
 # keras-fruit-classifer
 
-Classifying fruits using a Keras multi-class image classification model and Google Open Images. See the accompanying blog post [here](TODO: insert link to blog post)
+Classifying fruits using a Keras multi-class image classification model and Google Open Images. 
+
+**See the accompanying blog post [here](TODO: insert link to blog post)**
 
 ## Getting the data
 
