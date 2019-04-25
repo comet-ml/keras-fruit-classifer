@@ -1,6 +1,6 @@
 # keras-fruit-classifer
 
-Classifying fruits using a Keras multi-class image classification model and Google Open Images.
+Classifying fruits using a Keras multi-class image classification model and Google Open Images. See the accompanying blog post [here](TODO: insert link to blog post)
 
 ## Getting the data
 
@@ -24,16 +24,17 @@ open_fruits['images_cropped'].fetch('images_cropped/')
 
 ## Building the models
 
-Model definition code is available in the form of `.py` and `.ipynb` files in this repository's `models/` folder.
+The model definition code is available in the form of `.py` and `.ipynb` files in this repository's `models/` and `notebooks/` folders, respectively.
 
-* TODO: summarize the models built here.
+There are two model architectures to choose from: **InceptionV3** and **VGG16**. For both models, we are using the pretrained networks (both trained on ImageNet) and finetuning the models on our new fruit classes.
+
 * TODO: include environments also (only worth doing for models which "make the cut" and end up in the article).
 
 ## Getting the models
 
 Trained model artifacts are available for browsing via CometML and for download via Quilt t4.
 
-To browse the models generated for this demo in an interactive way [click here](https://www.comet.ml/ceceshao1/aleksey-open-fruits) (TODO: replace this link).
+To browse the models generated for this demo in an interactive way [click here](https://www.comet.ml/ceceshao1/comet-quilt-example)
 
 To bring the model artifacts to your local machine, download the `quit/open_fruit_models` package:
 
