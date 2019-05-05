@@ -28,13 +28,18 @@ open_fruits['images_cropped'].fetch('images_cropped/')
 
 The model definition code is available in the form of `.py` and `.ipynb` files in this repository's `models/` and `notebooks/` folders, respectively.
 
-There are two model architectures to choose from: **InceptionV3** and **VGG16**. For both models, we are using the pretrained networks (both trained on ImageNet) and finetuning the models on our new fruit classes.
+There are two model architectures to choose from: **InceptionV3** and **VGG16**. For both models, we are using the pretrained networks (both trained on ImageNet) and finetuning the models on our new fruit classes. The training process for both models is tracked with [Comet.ml](https://www.comet.ml)
+
+```python
+from comet_ml import Experiment
+experiment = Experiment(api_key="YOUR_API_KEY",project="PROJECT_NAME", workspace="WORKSPACE_NAME")
+```
 
 * TODO: include environments also (only worth doing for models which "make the cut" and end up in the article).
 
 ## Getting the models
 
-Trained model artifacts are available for browsing via CometML and for download via Quilt t4.
+Trained model artifacts are available for browsing via Comet.ml and for download via Quilt t4.
 
 To browse the models generated for this demo in an interactive way [click here](https://www.comet.ml/ceceshao1/comet-quilt-example)
 
