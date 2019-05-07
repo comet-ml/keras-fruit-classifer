@@ -28,14 +28,25 @@ open_fruits['images_cropped'].fetch('images_cropped/')
 
 The model definition code is available in the form of `.py` and `.ipynb` files in this repository's `models/` and `notebooks/` folders, respectively.
 
-There are two model architectures to choose from: **InceptionV3** and **VGG16**. For both models, we are using the pretrained networks (both trained on ImageNet) and finetuning the models on our new fruit classes. The training process for both models is tracked with [Comet.ml](https://www.comet.ml)
+There are two model architectures to choose from: **InceptionV3** and **VGG16**. For both models, we are using the pretrained networks (both trained on ImageNet) and finetuning the models on our new fruit classes. The training process, results, and experiment metadata for both models is tracked with [Comet.ml](https://www.comet.ml)
 
 ```python
 from comet_ml import Experiment
 experiment = Experiment(api_key="YOUR_API_KEY",project="PROJECT_NAME", workspace="WORKSPACE_NAME")
 ```
 
-* TODO: include environments also (only worth doing for models which "make the cut" and end up in the article).
+To reproduce the results, it's also helpful to have the exact environment details. You can retrieve the details from Comet.ml through the REST API. See the code here:
+
+```python
+PY_VERSION=$(python -c "import comet_ml; print(comet_ml.API().get_experiment_system_details('01e427cedce145f8bc69f19ae9fb45bb')['python_version'])")
+
+conda create -n my_test_env python=$PY_VERSION
+conda activate my_test_env
+
+python -c "import comet_ml; print('\n'.join(comet_ml.API().get_experiment_installed_packages('01e427cedce145f8bc69f19ae9fb45bb')))" > requirements.txt
+pip install -r requirements.txt
+```
+
 
 ## Getting the models
 
